@@ -1,0 +1,11 @@
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\bin\Release\Anarchytool.exe.config
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\bin\Release\Anarchytool.exe
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\bin\Release\Anarchytool.pdb
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\bin\Release\Leaf.xNet.xml
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\bin\Release\Newtonsoft.Json.xml
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\obj\Release\Anarchytool.csprojAssemblyReference.cache
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\obj\Release\Anarchytool.csproj.CoreCompileInputs.cache
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\obj\Release\Anarchytool.csproj.Fody.CopyLocal.cache
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\obj\Release\Anarchytool.csproj.CopyComplete
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\obj\Release\Anarchytool.exe
+C:\Users\Tayhay\Desktop\Anarchytool\Anarchytool\obj\Release\Anarchytool.pdb

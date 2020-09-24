@@ -361,6 +361,9 @@ namespace Random_Unicode
                         Console.WriteLine("");
                         Environment.Exit(0);
                         break;
+                    
+                    case "webhook":
+                        break;
 
                     default:
                         Console.ForegroundColor = Color.DeepPink;

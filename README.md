@@ -4,4 +4,4 @@
 
 𝗽𝗿𝗲𝘃𝗶𝗲𝘄
 
-![](https://cdn.discordapp.com/attachments/423193702115180544/757160831057395802/unknown.png)
+![](https://cdn.discordapp.com/attachments/750750380794839164/764650525362618428/unknown.png)

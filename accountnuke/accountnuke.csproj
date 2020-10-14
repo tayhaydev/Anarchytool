@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6E0B61C8-1219-498A-B0ED-6D9BC934E4CF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Anarchytool</RootNamespace>
-    <AssemblyName>Anarchytool</AssemblyName>
+    <RootNamespace>accountnuke</RootNamespace>
+    <AssemblyName>accountnuke</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

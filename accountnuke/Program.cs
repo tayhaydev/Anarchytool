@@ -82,11 +82,11 @@ namespace Random_Unicode
                         int y = 0;
                         foreach (var guild in client.GetGuilds())
                         {
-                            x = x + 1;
+                            y++;
                         }
                         foreach (var relationship in client.GetRelationships())
                         {
-                            y = y + 1;
+                            y++;
                         }
                         Console.WriteLine("> guilds          | " + x);
                         Console.WriteLine("> friends         | " + y);
